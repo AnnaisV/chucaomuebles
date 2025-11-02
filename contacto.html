@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Chucao Muebles</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="imagenes/logo.png" alt="Logo Chucao Muebles">
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="#">PROYECTOS</a>
+            <a href="#">NOSOTROS</a>
+            <a href="contacto.html" class="active">CONTACTO</a>
+            <a href="carrito.html">MI CARRITO</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contacto">
+        <section class="contacto-contenedor">
+
+            <!-- Formulario -->
+            <div class="formulario">
+                <h2>Formulario de Contacto</h2>
+                <form>
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required>
+
+                    <label for="asunto">Asunto *</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Información lateral -->
+            <aside class="info-contacto">
+                <h3>Los proyectos a pedido se desarrollan en 4 etapas:</h3>
+                <ol>
+                    <li>Estimación del proyecto.</li>
+                    <li>Desarrollo de propuesta del proyecto.</li>
+                    <li>Si se aprueba el presupuesto, se paga el 50% para iniciar.</li>
+                    <li>El monto restante se paga al finalizar el proyecto.</li>
+                </ol>
+            </aside>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Chucao Muebles - contacto@chucaomuebles.cl</p>
+    </footer>
+</body>
+
+</html>

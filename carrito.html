@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Chucao Muebles</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="imagenes/logo.png" alt="Logo Chucao Muebles">
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="#">PROYECTOS</a>
+            <a href="#">NOSOTROS</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="carrito.html" class="active">MI CARRITO</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="carrito">
+        <h2>Carrito de Compras</h2>
+
+        <section class="contenedor-carrito">
+            <!-- Tabla de productos -->
+            <div class="tabla-carrito">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="producto-info">
+                                <img src="imagenes/velador_vari.png" alt="Velador Vari">
+                                <div>
+                                    <strong>Velador Vari</strong><br>
+                                    Velador de raulí que combina texturas, con un cajón liso y otro acanalado.
+                                </div>
+                            </td>
+                            <td>$189.990</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>$189.990</td>
+                        </tr>
+
+                        <tr>
+                            <td class="producto-info">
+                                <img src="imagenes/mueble_austral.png" alt="Mueble Austral">
+                                <div>
+                                    <strong>Mueble Austral</strong><br>
+                                    Mueble de raulí con elegantes puertas de listones verticales.
+                                </div>
+                            </td>
+                            <td>$619.990</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>$619.990</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="botones-carrito">
+                    <button class="btn-volver">Continuar Navegando</button>
+                    <button class="btn-actualizar">Actualizar Carrito</button>
+                </div>
+            </div>
+
+            <!-- Resumen lateral -->
+            <aside class="resumen">
+                <h3>Resumen</h3>
+                <p><span>Subtotal</span> <span>$809.980</span></p>
+                <p><span>Costo de Envío</span> <span>A Calcular</span></p>
+                <hr>
+                <p><strong>Total pedido</strong> <strong>$809.980</strong></p>
+
+                <input type="text" placeholder="Ingrese Código de Descuento">
+                <a href="#" class="aplicar">Aplicar Descuento</a>
+
+                <button class="btn-continuar">Continuar</button>
+            </aside>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Chucao Muebles - contacto@chucaomuebles.cl</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+/* --------------------------------------------------------
+   ESTILOS GENERALES - CHUCAO MUEBLES
+   -------------------------------------------------------- */
+
+/* Fuente principal */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* --------------------------------------------------------
+   VARIABLES DE COLOR
+   -------------------------------------------------------- */
+:root {
+    --color-cafe: #5b3c20;
+    --color-cafe-claro: #9b6c3b;
+    --color-fondo-footer: #41210A;
+    --color-texto: #333;
+    --color-borde: #ddd;
+}
+
+/* --------------------------------------------------------
+   REINICIO BÁSICO
+   -------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------
+   ESTILOS BASE DEL CUERPO
+   -------------------------------------------------------- */
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--color-texto);
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------
+   HEADER (ENCABEZADO)
+   -------------------------------------------------------- */
+header {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Logo */
+header img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------
+   MENÚ DE NAVEGACIÓN
+   -------------------------------------------------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-cafe);
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Enlace activo (página actual) */
+nav a.active {
+    background-color: var(--color-cafe);
+    color: white;
+}
+
+/* Hover */
+nav a:hover {
+    background-color: var(--color-cafe-claro);
+    color: white;
+}
+
+/* --------------------------------------------------------
+   BANNER PRINCIPAL
+   -------------------------------------------------------- */
+#banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------
+   PRODUCTOS DESTACADOS
+   -------------------------------------------------------- */
+#destacados {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#destacados h2 {
+    color: var(--color-cafe);
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 0;
+}
+
+/* --------------------------------------------------------
+   TARJETAS DE PRODUCTOS
+   -------------------------------------------------------- */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.producto {
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.producto h3 {
+    color: var(--color-cafe);
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.producto p {
+    color: #444;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------------
+   FOOTER (PIE DE PÁGINA)
+   -------------------------------------------------------- */
+footer {
+    text-align: center;
+    background-color: var(--color-fondo-footer);
+    padding: 15px;
+    color: #ddd;
+    border-top: 1px solid var(--color-borde);
+    margin-top: 40px;
+}
+
+/* --------------------------------------------------------
+   CATÁLOGO DE PRODUCTOS
+   -------------------------------------------------------- */
+#catalogo {
+    padding: 20px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#catalogo h1 {
+    color: var(--color-cafe);
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+/* --------------------------------------------------------
+   DETALLE DE PRODUCTO (PÁGINA DE PRODUCTO)
+   -------------------------------------------------------- */
+.detalle-producto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.detalle-producto .imagen {
+    text-align: center;
+}
+
+.imagen .principal {
+    width: 420px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Miniaturas */
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.miniaturas img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Efecto al pasar el mouse en miniaturas */
+.miniaturas img:hover {
+    transform: scale(1.05);
+    border-color: var(--color-cafe);
+}
+
+/* Columna derecha (información del producto) */
+.detalle-producto .info {
+    max-width: 450px;
+}
+
+/* Texto */
+.detalle-producto h1 {
+    color: var(--color-cafe);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.detalle-producto p {
+    color: var(--color-texto);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Precio */
+.precio-titulo {
+    font-size: 20px;
+    color: var(--color-cafe);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.precio-titulo .precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-cafe);
+}
+
+/* Botón agregar al carrito */
+.btn-agregar {
+    background-color: var(--color-cafe);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: var(--color-cafe-claro);
+}
+
+/* ============================================================
+   PÁGINA DE CONTACTO
+   ============================================================ */
+
+#contacto {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.formulario {
+    flex: 1 1 55%;
+}
+
+.formulario h2 {
+    color: var(--color-cafe);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--color-cafe);
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--color-cafe);
+}
+
+.btn-enviar {
+    background-color: var(--color-cafe);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-cafe-claro);
+}
+
+/* Bloque lateral de información */
+.info-contacto {
+    flex: 1 1 35%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+}
+
+.info-contacto h3 {
+    color: var(--color-cafe);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.info-contacto ol {
+    margin-left: 20px;
+    color: #444;
+}
+
+.info-contacto li {
+    margin-bottom: 8px;
+}
+
+/* ============================================================
+   PÁGINA DE CARRITO DE COMPRAS
+   ============================================================ */
+
+#carrito {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+#carrito h2 {
+    color: var(--color-cafe);
+    margin-bottom: 30px;
+}
+
+/* Contenedor general */
+.contenedor-carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Tabla de productos */
+.tabla-carrito {
+    flex: 1 1 65%;
+    background-color: #fff;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+thead {
+    background-color: #f9f9f9;
+    color: var(--color-cafe);
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.producto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.producto-info img {
+    width: 80px;
+    border-radius: 8px;
+}
+
+.producto-info div {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Campos cantidad */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Botones debajo de la tabla */
+.botones-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-volver,
+.btn-actualizar {
+    background-color: #eee;
+    color: #333;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover,
+.btn-actualizar:hover {
+    background-color: var(--color-cafe-claro);
+    color: #fff;
+}
+
+/* ------------------------------------------------------------
+   RESUMEN LATERAL
+   ------------------------------------------------------------ */
+.resumen {
+    flex: 1 1 30%;
+    background-color: #fff;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.resumen h3 {
+    color: var(--color-cafe);
+    margin-bottom: 20px;
+}
+
+.resumen p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.resumen hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.resumen input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.resumen .aplicar {
+    font-size: 12px;
+    color: var(--color-cafe);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.btn-continuar {
+    background-color: var(--color-cafe);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-continuar:hover {
+    background-color: var(--color-cafe-claro);
+}
